@@ -1,0 +1,19 @@
+<h1>Товары</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Номер заказа</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order.each do |order| %>
+      <tr>
+        <td><a href="/order/<%= order.id%>"> Заказ № <%= order.id%> </a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "В магазин", root_path %>
+

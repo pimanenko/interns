@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<table>
+	<tr>
+		<td><%= link_to 'Редактировать', edit_product_path(@product) if user_signed_in? %></td>
+		<td><%= link_to 'Назад', products_path %></td>
+	</tr>
+</table>
